@@ -151,31 +151,31 @@ function Todo() {
                     onClose={() => setMessage(null)}
                 />
             )}
-            <div class="flex items-center justify-center pt-5">
-                <div class="relative flex">
-                    <input value={title} onChange={(e) => setTitle(e.target.value)} class="block p-3 pl-4 w-96 text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Input your task . . ." required />
-                    <button onClick={addTodo} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-r-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Todo</button>
+            <div className="flex items-center justify-center pt-5">
+                <div className="relative flex">
+                    <input value={title} onChange={(e) => setTitle(e.target.value)} className="block p-3 pl-4 w-96 text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Input your task . . ." required />
+                    <button onClick={addTodo} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-r-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Todo</button>
                 </div>
             </div>
-            <div class='flex min-h-screen justify-center bg-gradient-to-br'>
-                <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-                    <div class="overflow-x-auto relative shadow-md pt-4">
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <div className='flex min-h-screen justify-center bg-gradient-to-br'>
+                <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+                    <div className="overflow-x-auto relative shadow-md pt-4">
+                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
-                                    <th scope="col" class="py-4 px-16">Task Name</th>
-                                    <th scope="col" class="py-4 px-16">Created Date</th>
-                                    <th scope="col" class="py-4 px-16">Last Updated Date</th>
-                                    <th scope="col" class="py-3 px-10">Action</th>
+                                    <th scope="col" className="py-4 px-16">Task Name</th>
+                                    <th scope="col" className="py-4 px-16">Created Date</th>
+                                    <th scope="col" className="py-4 px-16">Last Updated Date</th>
+                                    <th scope="col" className="py-3 px-10">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {todos.map(todo => (
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <td class="py-4 px-16">{todo.title}</td>
-                                        <td class="py-4 px-16">{todo.createdDate}</td>
-                                        <td class="py-4 px-16">{todo.lastUpdatedDate}</td>
-                                        <td class="py-4 px-6 flex">
+                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <td className="py-4 px-16">{todo.title}</td>
+                                        <td className="py-4 px-16">{todo.createdDate}</td>
+                                        <td className="py-4 px-16">{todo.lastUpdatedDate}</td>
+                                        <td className="py-4 px-6 flex">
                                             <a className='cursor-pointer' x-data="{ tooltip: 'Delete' }" onClick={() => deleteTodo(todo.id)}>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,7 @@ function Todo() {
                                                     viewBox="0 0 24 24"
                                                     stroke-width="1.5"
                                                     stroke="currentColor"
-                                                    class="h-6 w-6"
+                                                    className="h-6 w-6"
                                                     x-tooltip="tooltip"
                                                 >
                                                     <path
@@ -200,7 +200,7 @@ function Todo() {
                                                     viewBox="0 0 24 24"
                                                     stroke-width="1.5"
                                                     stroke="currentColor"
-                                                    class="h-6 w-6"
+                                                    className="h-6 w-6"
                                                     x-tooltip="tooltip"
                                                 >
                                                     <path
